@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Início — Moradia Digna{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <span class="eyebrow">Projeto Social</span>
+    <h1>Todo lar começa com um <em>direito</em>.</h1>
+    <p>Moradia digna não é privilégio — é garantia constitucional. Conectamos famílias de baixa renda aos programas habitacionais disponíveis no Brasil.</p>
+    <div class="hero-btns">
+      <a href="/cadastro" class="btn btn-primary">Cadastrar minha família</a>
+      <a href="/programas" class="btn btn-outline">Ver programas</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="house-card">
+      <div class="house-icon">🏘️</div>
+      <p>+ de <strong>4,8 milhões</strong> de famílias aguardam moradia no Brasil</p>
+    </div>
+  </div>
+</section>
+
+<section class="cards-section">
+  <h2>Por que moradia digna importa?</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">📋</span>
+      <h3>Direito garantido</h3>
+      <p>A Constituição Federal de 1988 reconhece a moradia como direito social fundamental de todo cidadão brasileiro.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">👨‍👩‍👧</span>
+      <h3>Impacto na família</h3>
+      <p>Ter um lar estável reduz a evasão escolar, melhora a saúde e aumenta a renda das famílias ao longo do tempo.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🤝</span>
+      <h3>Programas disponíveis</h3>
+      <p>Existem programas federais, estaduais e municipais que podem ajudar — mas muitas famílias não sabem que têm direito.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Sua família pode ter direito a um lar.</h2>
+  <p>Cadastre-se gratuitamente e descubra quais programas habitacionais se encaixam na sua situação.</p>
+  <a href="/cadastro" class="btn btn-primary">Fazer cadastro agora</a>
+</section>
+{% endblock %}

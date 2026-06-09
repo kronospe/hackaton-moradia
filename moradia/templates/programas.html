@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Programas Habitacionais — Moradia Digna{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <span class="eyebrow">Habitação</span>
+  <h1>Programas Habitacionais</h1>
+  <p>Conheça os principais programas disponíveis para famílias de baixa renda no Brasil.</p>
+</section>
+
+<section class="programas-grid">
+
+  <div class="programa-card destaque">
+    <div class="programa-tag">Federal</div>
+    <h2>Minha Casa, Minha Vida</h2>
+    <p>Programa do governo federal que subsidia a compra de imóveis para famílias com renda de até R$ 8.000/mês. Oferece juros reduzidos e entrada facilitada.</p>
+    <ul class="programa-lista">
+      <li>Faixa 1: renda até R$ 2.640 — subsídio de até 95%</li>
+      <li>Faixa 2: renda até R$ 4.400 — juros a partir de 4,75% a.a.</li>
+      <li>Faixa 3: renda até R$ 8.000 — juros a partir de 7,66% a.a.</li>
+    </ul>
+    <a href="https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/habitacao/minha-casa-minha-vida" target="_blank" class="btn btn-outline">Saiba mais</a>
+  </div>
+
+  <div class="programa-card">
+    <div class="programa-tag">Federal</div>
+    <h2>Regularização Fundiária (Reurb)</h2>
+    <p>Para famílias que já moram em terrenos irregulares. O programa legaliza a posse e garante a escritura do imóvel.</p>
+    <ul class="programa-lista">
+      <li>Gratuito para famílias de baixa renda (Reurb-S)</li>
+      <li>Regulariza áreas urbanas informais</li>
+      <li>Procure a prefeitura do seu município</li>
+    </ul>
+  </div>
+
+  <div class="programa-card">
+    <div class="programa-tag">Federal</div>
+    <h2>Aluguel Social</h2>
+    <p>Auxílio financeiro temporário para famílias em situação de vulnerabilidade habitacional ou que perderam a moradia por desastres.</p>
+    <ul class="programa-lista">
+      <li>Gerenciado pelos municípios</li>
+      <li>Valor varia por cidade</li>
+      <li>Procure o CRAS da sua cidade</li>
+    </ul>
+  </div>
+
+  <div class="programa-card">
+    <div class="programa-tag">Estadual — PE</div>
+    <h2>COHAB-PE</h2>
+    <p>A Companhia de Habitação de Pernambuco oferece programas de habitação popular para residentes do estado.</p>
+    <ul class="programa-lista">
+      <li>Financiamentos com juros reduzidos</li>
+      <li>Programas de urbanização de favelas</li>
+      <li>Atendimento em Recife e interior</li>
+    </ul>
+    <a href="https://www.cohab.pe.gov.br" target="_blank" class="btn btn-outline">Acessar COHAB-PE</a>
+  </div>
+
+  <div class="programa-card">
+    <div class="programa-tag">Municipal — Recife</div>
+    <h2>PREZEIS</h2>
+    <p>Programa de Regularização das Zonas Especiais de Interesse Social do Recife. Atua na urbanização e regularização de comunidades.</p>
+    <ul class="programa-lista">
+      <li>Foco em comunidades do Recife</li>
+      <li>Urbanização e infraestrutura</li>
+      <li>Regularização fundiária local</li>
+    </ul>
+  </div>
+
+  <div class="programa-card">
+    <div class="programa-tag">Apoio</div>
+    <h2>CRAS — Centro de Referência</h2>
+    <p>O CRAS é a porta de entrada para todos os programas sociais. Lá você encontra orientação sobre habitação, renda e assistência social.</p>
+    <ul class="programa-lista">
+      <li>Gratuito e aberto a todos</li>
+      <li>Atendimento presencial</li>
+      <li>Procure o mais próximo da sua casa</li>
+    </ul>
+  </div>
+
+</section>
+
+<section class="cta-section">
+  <h2>Quer saber quais programas sua família pode acessar?</h2>
+  <p>Faça o cadastro e receba orientações personalizadas.</p>
+  <a href="/cadastro" class="btn btn-primary">Fazer cadastro</a>
+</section>
+{% endblock %}

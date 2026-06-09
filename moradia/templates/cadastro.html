@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Cadastro — Moradia Digna{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <span class="eyebrow">Cadastro Gratuito</span>
+  <h1>Cadastro de Família</h1>
+  <p>Preencha os dados abaixo para identificarmos os programas disponíveis para você.</p>
+</section>
+
+{% if request.args.get('sucesso') %}
+<div class="alert alert-sucesso">
+  ✅ Cadastro realizado com sucesso! Em breve entraremos em contato.
+</div>
+{% endif %}
+
+<section class="form-section">
+  <form action="/cadastro" method="POST" class="form-cadastro" id="formCadastro">
+
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva" required />
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF *</label>
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="telefone">Telefone *</label>
+          <input type="text" id="telefone" name="telefone" placeholder="(81) 99999-9999" required />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade *</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife" required />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Situação Habitacional</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="renda">Renda familiar mensal *</label>
+          <select id="renda" name="renda" required>
+            <option value="">Selecione...</option>
+            <option value="ate_1320">Até R$ 1.320</option>
+            <option value="ate_2640">De R$ 1.320 a R$ 2.640</option>
+            <option value="ate_4400">De R$ 2.640 a R$ 4.400</option>
+            <option value="ate_8000">De R$ 4.400 a R$ 8.000</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="membros">Número de membros na família *</label>
+          <select id="membros" name="membros" required>
+            <option value="">Selecione...</option>
+            <option value="1">1 pessoa</option>
+            <option value="2">2 pessoas</option>
+            <option value="3">3 pessoas</option>
+            <option value="4">4 pessoas</option>
+            <option value="5+">5 ou mais</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label for="situacao">Situação atual de moradia *</label>
+        <select id="situacao" name="situacao" required>
+          <option value="">Selecione...</option>
+          <option value="aluguel">Pago aluguel</option>
+          <option value="cedido">Moro em imóvel cedido</option>
+          <option value="irregular">Moro em área irregular/favela</option>
+          <option value="rua">Estou em situação de rua</option>
+          <option value="proprio_irregular">Tenho imóvel próprio mas sem escritura</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary btn-full">Enviar cadastro</button>
+    <p class="form-obs">* Campos obrigatórios. Seus dados são protegidos e usados apenas para fins do programa.</p>
+  </form>
+</section>
+{% endblock %}
